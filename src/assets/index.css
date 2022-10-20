@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  background-color: #f3f4f6;
+  min-height: 100vh;
+}
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  outline-width: 0px;
+}
+
+a {
+  cursor: pointer;
+}
+
+hr {
+  border-top-width: 0px;
+}
+
+.bg-primary {
+  background-color: #4d5369;
+}
+.bg-button, .bg-secondary {
+  background-color: #ba4e5b;
+}
+.primary {
+  color:#4d5369
+}
+.secondary {
+  color:#ba4e5b
+}
+.default {
+  color: #23303d;
+
+}
+.title-color {
+  color:#23303d
+}
