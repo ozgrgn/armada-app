@@ -27,7 +27,7 @@ token.subscribe((value) => {
 });
 
 const _lang =
-  localStorage.getItem("lang") && localStorage.getItem("lang") != "null"
+  localStorage.getItem("lang") && localStorage.getItem("lang") != "tr" && localStorage.getItem("lang") != "null"
     ? localStorage.getItem("lang")
     : "en";
 

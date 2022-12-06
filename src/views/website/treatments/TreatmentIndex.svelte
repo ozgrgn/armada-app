@@ -136,7 +136,9 @@ import SmallCertificate from "./SmallCertificate.svelte";
     {/if}
 <div class="w-full flex justify-center">
   <SmallCertificate/>
-  </div></div>
+  
+  </div>
+</div>
   <div class=" col-span-4 mx-5 order-1  md:order-2">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3  ">
       <div class="f">
@@ -176,7 +178,9 @@ import SmallCertificate from "./SmallCertificate.svelte";
     <div  class=" {$lang == "tr"
       ? 'hidden'
       : 'block'}" >
-    <Nocost {form} {treatment} /></div></section>
+    <Nocost {form} {treatment} /></div>
+  </section>
   </div>
 
 </div>
+

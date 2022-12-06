@@ -47,5 +47,8 @@ export let treatments
 {#if treatments }
 <Services {treatments} />
 {/if}
-
+<div class="flex justify-center my-5">
+  <script src="https://bookimed-assets.s3.eu-central-1.amazonaws.com/partners/widget/widget.js" async></script>
+  <div id="bookimed-widget" data-bookimed-widget-id="3c6a8a78-402b-433b-a4d8-1e5a6c9a56ea" data-lang="en"></div>
+</div>
 <!-- <GalleryLine /> -->

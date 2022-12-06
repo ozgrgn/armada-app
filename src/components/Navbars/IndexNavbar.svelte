@@ -9,12 +9,12 @@
   import LangSelect from "../Form/LangSelect.svelte";
   import BigForm from "../../views/website/BigForm.svelte";
   $: navbarOpen = false;
-  const langTrigger = (_lang) => {
-    document.documentElement.setAttribute("lang", _lang);
-    setTimeout(() => {
-      lang.set(_lang);
-    }, 1); // cause svelte is faster than browser
-  };
+  // const langTrigger = (_lang) => {
+  //   document.documentElement.setAttribute("lang", _lang);
+  //   setTimeout(() => {
+  //     lang.set(_lang);
+  //   }, 1); // cause svelte is faster than browser
+  // };
   const navbarTrigger = (_navbarOpen) => {
     document.documentElement.setAttribute("navbarOpen", _navbarOpen);
     setTimeout(() => {

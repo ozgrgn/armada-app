@@ -43,21 +43,20 @@
                 target="_blank"
               >
                 <div class="review-avatar">
-                  <div class="review-avatar-bg flex flex-col justify-center text-center ">
-                    {#if review.reviewAvatar} 
-                   
-                 <img
-                      src={`https://super--bucket.s3.eu-west-3.amazonaws.com/${review.reviewAvatar}`}
-                      alt=""
-                      width="44"
-                      height="44"
-                      class="ReviewAvatar__Avatar-sc-1lraoly-2 TOyBs"
-                    />
+                  <div
+                    class="review-avatar-bg flex flex-col justify-center text-center "
+                  >
+                    {#if review.reviewAvatar}
+                      <img
+                        src={`https://super--bucket.s3.eu-west-3.amazonaws.com/${review.reviewAvatar}`}
+                        alt=""
+                        width="44"
+                        height="44"
+                        class="ReviewAvatar__Avatar-sc-1lraoly-2 TOyBs"
+                      />
                     {:else}
-                    {review.reviewName.charAt(0)} 
+                      {review.reviewName.charAt(0)}
                     {/if}
-                   
-                    
                   </div>
                 </div>
                 <div class="review-info">
