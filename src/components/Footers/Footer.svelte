@@ -227,6 +227,7 @@
       <p class="mt-8 text-base text-white md:mt-0 md:order-1">
         {general.copyright[`${$lang}`]}
       </p>
+      <a class="text-white" href="/privacy_policy">Privacy Policy</a>
     </div>
   </div>
 </footer>

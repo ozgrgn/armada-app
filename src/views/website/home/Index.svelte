@@ -9,6 +9,8 @@
   import Reviews from "./Reviews.svelte";
   import Social from "./../../../components/Social/Social.svelte";
  export let form;
+ export let general
+ console.log(general,"generalde general")
   let home;
   let reviews;
 export let treatments
@@ -28,7 +30,12 @@ export let treatments
 
 
 </script>
-
+<svelte:head>
+  {#if general}
+  <title>Armada Smile Dental Clinic</title>
+  <meta property="description" content={general.smallDesc[`${$lang}`]} />
+  {/if}
+</svelte:head>
 {#if home}
   <Banner {home} />
 {/if}

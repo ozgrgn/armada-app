@@ -2,12 +2,18 @@
   import ClinicImages from "./ClinicImages.svelte";
   import { navbar } from "../../../services/store";
   import { Translate } from "../../../services/language.js";
+  import { lang } from "../../../services/store";
 
 
   export let general;
-  console.log(general, "clinicImage general");
-</script>
 
+</script>
+<svelte:head>
+{#if general}
+<title>Armada Smile Dental Clinic | Our Clinics</title>
+<meta property="description" content={general.smallDesc[`${$lang}`]} />
+{/if}
+</svelte:head>
 <div class="">
   <div class=" ">
     <div class="relative h-96 ">

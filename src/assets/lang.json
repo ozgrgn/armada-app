@@ -1,5 +1,6 @@
 {
   "en": {
+    "privacy_policy":"Privacy Policy",
     "social":"Social Media",
     "address":"Address",
     "home":"Home",
@@ -55,6 +56,7 @@
     "Image": "Image"
   },
   "tr": {
+    "privacy_policy":"Privacy Policy",
     "social":"Sosyal Medya",
     "address":"Adres",
     "home":"Ana Sayfa",

@@ -2,12 +2,17 @@
   import Clinic from "./Clinic.svelte";
   import Chairman from "./Chairman.svelte";
   import Logos from "./logos.svelte";
-  import { navbar } from "../../../services/store";
+  import { navbar,lang } from "../../../services/store";
 
   import { Translate } from "../../../services/language.js";
   export let general;
 </script>
-
+<svelte:head>
+{#if general}
+<title>Armada Smile Dental Clinic | About Us</title>
+<meta property="description" content={general.smallDesc[`${$lang}`]} />
+{/if}
+</svelte:head>
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="">
   <div class=" ">

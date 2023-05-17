@@ -1,18 +1,18 @@
 <script>
-  import { lang,navbar } from "../../../services/store";
+  import { lang, navbar } from "../../../services/store";
   import Faq from "./Faq.svelte";
   import List from "./List.svelte";
   import Nocost from "./Nocost.svelte";
   import SmallForm from "../SmallForm.svelte";
   import SmallReviews from "./SmallReviews.svelte";
-import Reviews from "../home/Reviews.svelte";
-import RestService from "../../../services/rest";
-import SmallCertificate from "./SmallCertificate.svelte";
+  import Reviews from "../home/Reviews.svelte";
+  import RestService from "../../../services/rest";
+  import SmallCertificate from "./SmallCertificate.svelte";
 
   export let form;
   export let treatmentlink;
   export let treatments;
-  let reviews
+  let reviews;
   const getReviews = async () => {
     let response = await RestService.getReviews();
     reviews = response["reviews"];
@@ -23,17 +23,21 @@ import SmallCertificate from "./SmallCertificate.svelte";
     return filtered.link[`${$lang}`] == treatmentlink;
   });
   function scrollIntoView({ target }) {
-   
     const el = document.querySelector(target.getAttribute("href"));
-    if (!el) return; console.log(el)
+    if (!el) return;
+    console.log(el);
     el.scrollIntoView({
       behavior: "smooth",
     });
   }
-
-
 </script>
 
+<svelte:head>
+  {#if treatment}
+    <title>Armada Smile Clinic | {treatment.header[`${$lang}`]}</title>
+    <meta property="description" content={treatment.smallDesc[`${$lang}`]} />
+  {/if}
+</svelte:head>
 <div class="">
   <div class=" ">
     <div class="relative h-96 ">
@@ -113,10 +117,10 @@ import SmallCertificate from "./SmallCertificate.svelte";
               />
             </svg>
             <p
-             
               class="ml-4  text-md font-medium text-blueGray-100 hover:text-gray-300"
-              >{treatment?.header[`${$lang}`]}</p
             >
+              {treatment?.header[`${$lang}`]}
+            </p>
           </div>
         </li>
       </ol>
@@ -128,17 +132,17 @@ import SmallCertificate from "./SmallCertificate.svelte";
   <div class="container px-4  order-2 md:order-1">
     <List {treatments} />
     <div class="mt-10 hidden md:block">
-    <SmallForm {treatments} /></div>
+      <SmallForm {treatments} />
+    </div>
     {#if reviews}
-    {#key $lang}
-      <SmallReviews {reviews}/>
+      {#key $lang}
+        <SmallReviews {reviews} />
       {/key}
     {/if}
-<div class="w-full flex justify-center">
-  <SmallCertificate/>
-  
+    <div class="w-full flex justify-center">
+      <SmallCertificate />
+    </div>
   </div>
-</div>
   <div class=" col-span-4 mx-5 order-1  md:order-2">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3  ">
       <div class="f">
@@ -175,12 +179,9 @@ import SmallCertificate from "./SmallCertificate.svelte";
     </div>
     <Faq {treatment} />
     <section id="form" class="pt-5">
-    <div  class=" {$lang == "tr"
-      ? 'hidden'
-      : 'block'}" >
-    <Nocost {form} {treatment} /></div>
-  </section>
+      <div class=" {$lang == 'tr' ? 'hidden' : 'block'}">
+        <Nocost {form} {treatment} />
+      </div>
+    </section>
   </div>
-
 </div>
-

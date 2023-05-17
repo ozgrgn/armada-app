@@ -9,8 +9,9 @@
   import ClinicIndex from "../views/website/clinic/ClinicIndex.svelte";
   import TreatmentIndex from "../views/website/treatments/TreatmentIndex.svelte";
   import ContactIndex from "../views/website/contact/ContactIndex.svelte";
-  import Index from "../views/website/home/Index.svelte";
   import Social from "../components/Social/Social.svelte";
+  import Kvkk from "../views/website/kvkk/kvkk.svelte";
+  import Index from "../views/website/home/Index.svelte";
   let general;
   let treatments;
   let menu;
@@ -19,6 +20,8 @@
   const getGeneral = async () => {
     let response = await RestService.getGeneral();
     general = response["general"];
+    console.log(general,"general")
+
   };
   getGeneral();
 
@@ -60,6 +63,9 @@
   {#if general}
     <Route path="/clinic" component={ClinicIndex} {general} />
   {/if}
+  {#if general}
+  <Route path="/privacy_policy" component={Kvkk} {general} />
+{/if}
   {#if treatments && form}
     <Route
       path="/treatments/:treatmentlink"
