@@ -17,17 +17,17 @@
             <div class="w-full aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
               <img src="assets/img/clinic/1.jpeg" alt="Drawstring top with elastic loop closure and textured interior padding." class="w-full h-full object-center object-cover">
             </div>
-            <h2 id="details-heading" class="text-2xl mt-4 font-extrabold tracking-tight text-gray-700 sm:text-2xl"> {general.branch1Header[`${$lang}`]}</h2>
-            <p class=" text-base text-gray-500"> {general.branch1Desc[`${$lang}`]}</p>
+           
           </div>
           <div>
             <div class="w-full aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
               <img src="assets/img/clinic/11.jpeg" alt="Front zipper pouch with included key ring." class="w-full h-full object-center object-cover">
             </div>
-            <h2 id="details-heading" class="text-2xl mt-4 font-extrabold tracking-tight text-gray-700 sm:text-2xl">{general.branch2Header[`${$lang}`]}</h2>
-            <p class=" text-base text-gray-500">{general.branch2Desc[`${$lang}`]}</p>
-          </div>
-        </div>
+            
+          </div>  </div>
+          <h2 id="details-heading" class="colspan-2 text-2xl mt-4 font-extrabold tracking-tight text-gray-700 sm:text-2xl"> {general.branch1Header[`${$lang}`]}</h2>
+          <p class=" text-base text-gray-500"> {general.branch1Desc[`${$lang}`]}</p>
+      
       </section>
     </div>
   </div>
